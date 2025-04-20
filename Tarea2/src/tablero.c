@@ -16,7 +16,6 @@ void inicializarTablero(Tablero* tablero , int filas , int columnas){
     tablero->filas = 0;
     tablero->columnas = 0;
     // Reservar memoria para el tablero
-    tablero->celdas = malloc(sizeof(Tablero));
     tablero->filas = filas;
     tablero->columnas = columnas;
 
@@ -124,12 +123,10 @@ void liberarTablero(Tablero* tablero) {
             free(tablero->celdas[i]); // Liberar la fila
         }
     }
-    free(tablero->celdas); // Liberar el puntero a filas
-    tablero->celdas = NULL; // Evitar puntero colgante
+    // Liberar el puntero a filas
+    
+    free(tablero->celdas);    
     tablero->filas = 0; // Reiniciar filas
     tablero->columnas = 0; // Reiniciar columnas
-
-    // Liberar el tablero en sí
-    free(tablero); // Liberar el tablero
     tablero = NULL; // Evitar puntero colgante
 }

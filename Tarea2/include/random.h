@@ -25,7 +25,7 @@ void swap(int* a, int* b) {
 
 /**
  *  
- * @brief  Genera un número aleatorio entre min y max, asegurando que esté dentro del rango especificado. Esta es una forma común de generar un número aleatorio en un rango. La fórmula (rand() % (max - min + 1)) + min asegura que el resultado esté entre min y max, inclusive. El +1 es necesario para incluir el valor máximo en el rango. El operador % asegura que el resultado se envuelva si excede el máximo. La función rand() genera un número pseudoaleatorio entre 0 y RAND_MAX. La función time(NULL) se utiliza para sembrar el generador de números aleatorios con la hora actual, asegurando resultados diferentes cada vez que se ejecuta el programa.
+ * @brief  Genera un número aleatorio entre min y max, asegurando que esté dentro del rango especificado.
  * @param min Valor mínimo del rango (inclusivo).
  * @param max Valor máximo del rango (inclusivo).
  * @return Un número entero aleatorio entre min y max, ambos incluidos. (tipo int)
