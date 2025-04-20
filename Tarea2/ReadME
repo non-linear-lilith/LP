@@ -1,49 +1,53 @@
-Katherine Francisca Huidobro Castillo
-202305656-6
+->Datos de la autora:
+    Nombre: Katherine Francisca Huidobro Castillo
+    ROL USM: 202305656-6
+    Github: https://github.com/non-linear-lilith/LP/tree/main/Tarea2
+    Mail: khuidobro@usm.cl
 
-El trabajo se realizo en Windows en WSL con una maquina virtual de Ubuntu 22.04.5 LTS
+->Detalles: 
+    El trabajo se realizo en Windows en WSL con una maquina virtual de Ubuntu 22.04.5 LTS
 
-Instrucciones para compilar En linux:
+->Instrucciones para compilar en linux:
 
-1.  Ingresar en terminal el comando 
+    1.  Ingresar en terminal el comando 
 
-    >> make
+        >> make
 
-    desde ./Tarea2 para compilar el programa.
-
-
-2.  Ingresar en terminal  el comando
-
-    >> ./bin/Tarea2_LP
-
-    para ejecutar el programa desde terminal.
+        desde ./Tarea2 para compilar el programa.
 
 
-3.  Una vez inicializado el programa, se sigue una lógica de comandos a ingresar acorde a la tarea:
-    a. Primero ingresar la dificultad.
+    2.  Ingresar en terminal  el comando
 
-    b. Jugar acorde a las reglas pedidas en  Tarea.
-    
-    c. Pregunta el juego si desea jugar denuevo o si desea cerrar.
+        >> ./bin/Tarea2_LP
+
+        para ejecutar el programa desde terminal.
 
 
-4.  Como paso adicional, se recomienda usar el archivo vg.sh añadido a fin de evaluar usando valgrind la tarea.
-    Este archivo fue el que se uso para buscar errores durante el desarrollo de la Tarea, crea una carpeta llamada vg_results donde guarda cada analisis con valgrind en un archivo llamado vg_num donde num
-    es el número del analisis.
+    3.  Una vez inicializado el programa, se sigue una lógica de comandos a ingresar acorde a la tarea:
+        a. Primero ingresar la dificultad.
 
-    a. Para ejecutar vg se debe primero crear un usuario:
+        b. Jugar acorde a las reglas pedidas en  Tarea.
 
-    >> chmod +x vg.sh
+        c. Pregunta el juego si desea jugar denuevo o si desea cerrar.
 
-    b. Abrir con:
 
-    >>./vg.sh
+    4.  Como paso adicional, se recomienda usar el archivo vg.sh añadido a fin de evaluar la tarea usando Valgrind.
+        Este archivo fue el que se uso para buscar errores durante el desarrollo de la Tarea, crea una carpeta llamada vg_results donde guarda cada analisis con valgrind en un archivo llamado vg_num donde num
+        es el número del analisis.
 
-    c. Luego ejecutar programa acorde al paso 3.
+        a. Para ejecutar vg se debe primero crear un usuario:
 
-    d. Finalmente revisar el ultimo archivo "num" en la carpeta vg_results el ultimo archivo de texto añadido:
+        >> chmod +x vg.sh
 
-    >> cd vg_results
-    >> ls 
-    >> vim vg_num
-    >> nano vg_num 
+        b. Abrir con:
+
+        >>./vg.sh
+
+        c. Luego ejecutar programa acorde al paso 3.
+
+        d. Finalmente revisar el ultimo archivo "num" en la carpeta vg_results el ultimo archivo de texto añadido:
+
+        >> cd vg_results
+        >> ls 
+        >> vim vg_num
+        >> nano vg_num 
