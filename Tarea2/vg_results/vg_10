@@ -1,0 +1,32 @@
+==25755== Memcheck, a memory error detector
+==25755== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==25755== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==25755== Command: ./bin/Tarea2_LP
+==25755== Parent PID: 25723
+==25755== 
+==25755== Invalid free() / delete / delete[] / realloc()
+==25755==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25755==    by 0x109CCF: liberarTablero (tablero.c:133)
+==25755==    by 0x1093ED: main (main.c:52)
+==25755==  Address 0x1ffefffba0 is on thread 1's stack
+==25755==  in frame #2, created by main (main.c:4)
+==25755== 
+==25755== 
+==25755== HEAP SUMMARY:
+==25755==     in use at exit: 16 bytes in 1 blocks
+==25755==   total heap usage: 13 allocs, 13 frees, 2,400 bytes allocated
+==25755== 
+==25755== 16 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==25755==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25755==    by 0x1095A0: inicializarTablero (tablero.c:19)
+==25755==    by 0x1093D5: main (main.c:50)
+==25755== 
+==25755== LEAK SUMMARY:
+==25755==    definitely lost: 16 bytes in 1 blocks
+==25755==    indirectly lost: 0 bytes in 0 blocks
+==25755==      possibly lost: 0 bytes in 0 blocks
+==25755==    still reachable: 0 bytes in 0 blocks
+==25755==         suppressed: 0 bytes in 0 blocks
+==25755== 
+==25755== For lists of detected and suppressed errors, rerun with: -s
+==25755== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)

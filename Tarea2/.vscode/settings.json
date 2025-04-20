@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "inventario.h": "c",
+        "stdio.h": "c",
+        "acciones.h": "c"
+    }
+}

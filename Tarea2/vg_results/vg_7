@@ -1,0 +1,60 @@
+==25036== Memcheck, a memory error detector
+==25036== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==25036== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==25036== Command: ./bin/Tarea2_LP
+==25036== Parent PID: 25010
+==25036== 
+==25036== Invalid read of size 8
+==25036==    at 0x109AF8: mostrarTablero (tablero.c:98)
+==25036==    by 0x1093F9: main (main.c:53)
+==25036==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==25036== 
+==25036== 
+==25036== Process terminating with default action of signal 11 (SIGSEGV)
+==25036==  Access not within mapped region at address 0x0
+==25036==    at 0x109AF8: mostrarTablero (tablero.c:98)
+==25036==    by 0x1093F9: main (main.c:53)
+==25036==  If you believe this happened as a result of a stack
+==25036==  overflow in your program's main thread (unlikely but
+==25036==  possible), you can try to increase the size of the
+==25036==  main thread stack using the --main-stacksize= flag.
+==25036==  The main thread stack size used in this run was 8388608.
+==25036== 
+==25036== HEAP SUMMARY:
+==25036==     in use at exit: 2,064 bytes in 3 blocks
+==25036==   total heap usage: 13 allocs, 10 frees, 2,400 bytes allocated
+==25036== 
+==25036== 16 bytes in 1 blocks are definitely lost in loss record 1 of 3
+==25036==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25036==    by 0x1095A0: inicializarTablero (tablero.c:19)
+==25036==    by 0x1093D5: main (main.c:50)
+==25036== 
+==25036== 1,024 bytes in 1 blocks are still reachable in loss record 2 of 3
+==25036==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25036==    by 0x48DFBA3: _IO_file_doallocate (filedoalloc.c:101)
+==25036==    by 0x48EECDF: _IO_doallocbuf (genops.c:347)
+==25036==    by 0x48EDF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+==25036==    by 0x48EC6D4: _IO_new_file_xsputn (fileops.c:1243)
+==25036==    by 0x48EC6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+==25036==    by 0x48E1F1B: puts (ioputs.c:40)
+==25036==    by 0x109292: main (main.c:11)
+==25036== 
+==25036== 1,024 bytes in 1 blocks are still reachable in loss record 3 of 3
+==25036==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25036==    by 0x48DFBA3: _IO_file_doallocate (filedoalloc.c:101)
+==25036==    by 0x48EECDF: _IO_doallocbuf (genops.c:347)
+==25036==    by 0x48EDCDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+==25036==    by 0x48EED95: _IO_default_uflow (genops.c:362)
+==25036==    by 0x48C7F67: __vfscanf_internal (vfscanf-internal.c:740)
+==25036==    by 0x48C3141: __isoc99_scanf (isoc99_scanf.c:30)
+==25036==    by 0x1092DA: main (main.c:16)
+==25036== 
+==25036== LEAK SUMMARY:
+==25036==    definitely lost: 16 bytes in 1 blocks
+==25036==    indirectly lost: 0 bytes in 0 blocks
+==25036==      possibly lost: 0 bytes in 0 blocks
+==25036==    still reachable: 2,048 bytes in 2 blocks
+==25036==         suppressed: 0 bytes in 0 blocks
+==25036== 
+==25036== For lists of detected and suppressed errors, rerun with: -s
+==25036== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
