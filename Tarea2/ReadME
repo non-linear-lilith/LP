@@ -1,0 +1,26 @@
+Katherine Francisca Huidobro Castillo
+202305656-6
+
+El trabajo se realizo en Windows en WSL con una maquina virtual de Ubuntu 22.04.5 LTS
+
+Instrucciones para compilar En linux:
+
+1. Ingresar en terminal el comando 
+
+    >>make
+
+    desde ./Tarea2 para compilar el programa.
+
+2. Ingresar en terminal  el comando
+
+    >> ./bin/Tarea2_LP
+
+    para ejecutar el programa desde terminal.
+
+3. Una vez inicializado el programa, se sigue una lógica de comandos a ingresar acorde a la tarea:
+    a. Primero ingresar la dificultad.
+    b. Jugar acorde a las reglas pedidas en  Tarea.
+    c. Pregunta el juego si desea jugar denuevo o si desea cerrar.
+
+
+

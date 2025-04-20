@@ -10,6 +10,8 @@ void actualizarCelda(Tablero* tablero , int x, int y, void* estacion){
         printf("Coordenadas fuera de rango.\n");
     }
 }
+
+
 void inicializarTablero(Tablero* tablero , int filas , int columnas){
     // Inicializar el tablero
     tablero->celdas = NULL; // Inicializar a NULL para evitar liberar memoria no asignada
