@@ -1,0 +1,15 @@
+==700632== Memcheck, a memory error detector
+==700632== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==700632== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==700632== Command: ./bin/Tarea2_LP
+==700632== Parent PID: 700625
+==700632== 
+==700632== 
+==700632== HEAP SUMMARY:
+==700632==     in use at exit: 0 bytes in 0 blocks
+==700632==   total heap usage: 15 allocs, 15 frees, 2,528 bytes allocated
+==700632== 
+==700632== All heap blocks were freed -- no leaks are possible
+==700632== 
+==700632== For lists of detected and suppressed errors, rerun with: -s
+==700632== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

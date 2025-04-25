@@ -1,5 +1,24 @@
-#!/bin/bash
-# filepath: /home/lilith/LP/Tarea2/vg.sh
+##############################################################################
+#            VG 
+# Valgrind Script Analyzer
+# by Katherine Huidobro github:non-linear-lilith
+#
+# Generic script to run Valgrind on a C++ executable
+# This script runs Valgrind on the specified executable, 
+# checks for memory leaks, and stores the results in a specified directory.
+# It also keeps track of the number of times it has been run
+# and creates a new output file for each run.
+# The script uses colors to highlight the output.
+#
+###############################################################################
+
+# first check if valgrind is installed
+if ! command -v valgrind &> /dev/null
+then
+    echo "Valgrind could not be found. Please install it first."
+    exit
+fi
+# runs the makefile to compile the code, if you want to run it without compiling, comment this line below
 make
 # Define output directory
 VG_DIR="vg_results"
@@ -26,18 +45,21 @@ counter_of_test=$((counter_of_test + 1))
 echo "$counter_of_test" > "$COUNTER_FILE"
 
 # Output file for this run
-OUTPUT_FILE="$VG_DIR/vg_${counter_of_test}"
+OUTPUT_FILE="$VG_DIR/vg_${counter_of_test}.txt"
 
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
+# Check if executable exists
+if [ ! -f "./bin/Tarea2_LP" ]; then
+    echo "Error: Executable ./bin/Tarea2_LP not found!"
+    exit 1
+fi
 
-echo "Running Valgrind analysis #${counter_of_test}..."
-echo "Output will be saved to: ${OUTPUT_FILE}"
 
-# Run valgrind with memory checking options
+# Run valgrind with memory checking options and -s
 valgrind --leak-check=full --show-leak-kinds=all \
          --track-origins=yes \
          --log-file="${OUTPUT_FILE}" ./bin/Tarea2_LP
@@ -52,7 +74,7 @@ ERRORS=$(grep "ERROR SUMMARY:" "${OUTPUT_FILE}" | awk '{print $4}')
 TOTAL_LEAKS=$((DEFINITELY_LOST + INDIRECTLY_LOST + POSSIBLY_LOST))
 
 # Print results
-echo -e "\n===== MEMORY ANALYSIS RESULTS =====\n"
+echo -e "\n===== VALGRIND MEMORY ANALYSIS RESULTS =====\n"
 
 if [ "$ERRORS" -gt 0 ]; then
     echo -e "${RED}$ERRORS memory errors detected${NC}"

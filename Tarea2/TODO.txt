@@ -1,0 +1,29 @@
+//TODO: FUNCIONES OBLIGATORIAS
+
+->//TODO: inventario.h
+    -[x] void crearInventario()
+    -[x] void agregarIngrediente()
+    -[x] void eliminarIngrediente()
+    -[x] void verInventario()
+    -[ ] Documentar funciones y structs
+
+->//TODO: acciones.h
+    -[ ] void cortar(void* contexto , int x, int y)
+    -[ ] void cocinar(void* contexto , int x, int y)
+    -[ ] void buscar_ingrediente(void* contexto , int x, int y)
+    -[ ] void apagar_incendio(void* contexto , int x, int y)
+    -[ ] void entregar_pedido(void* contexto)
+
+->//TODO: tablero.h
+    -[x] void inicializarTablero(Tablero* tablero , int filas , int columnas)
+    -[x] void mostrarTablero(Tablero* tablero)
+    -[ ] void actualizarCelda(Tablero* tablero , int x, int y, void* elemento)
+
+->//TODO: Main.c
+    -[ ] Funcion para mover el jugador.
+    -[ ] Impementar lógica del juego.
+    -[ ] (Opcional) Modularizar el juego.
+
+->//BUG: MEMORY LEAKS IN VALGRIND
+    -[x] NONE
+    

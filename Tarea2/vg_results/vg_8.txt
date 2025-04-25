@@ -1,0 +1,15 @@
+==513177== Memcheck, a memory error detector
+==513177== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==513177== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==513177== Command: ./bin/Tarea2_LP
+==513177== Parent PID: 513145
+==513177== 
+==513177== 
+==513177== HEAP SUMMARY:
+==513177==     in use at exit: 0 bytes in 0 blocks
+==513177==   total heap usage: 13 allocs, 13 frees, 2,424 bytes allocated
+==513177== 
+==513177== All heap blocks were freed -- no leaks are possible
+==513177== 
+==513177== For lists of detected and suppressed errors, rerun with: -s
+==513177== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

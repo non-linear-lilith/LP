@@ -1,19 +1,23 @@
+INF-253 Lenguajes de Programación UTFSM SJ
+Tarea 2: C
+
 ->Datos de la autora:
     Nombre: Katherine Francisca Huidobro Castillo
-    ROL USM: 202305656-6
+    ROL USM: 202304656-6
+    Paralelo: 200 
     Github: https://github.com/non-linear-lilith/LP/tree/main/Tarea2
     Mail: khuidobro@usm.cl
 
 ->Detalles: 
     El trabajo se realizo en Windows en WSL con una maquina virtual de Ubuntu 22.04.5 LTS
 
-->Instrucciones para compilar en linux:
+->Instrucciones para compilar y ejecutar en linux e inicializar herramientas para facilitar la revición:
 
     1.  Ingresar en terminal el comando 
 
         >> make
 
-        desde ./Tarea2 para compilar el programa.
+        para compilar el programa hacia el archivo ejecutable Tarea2_LP que es guardado en la carpeta ./bin.
 
 
     2.  Ingresar en terminal  el comando
@@ -26,7 +30,7 @@
     3.  Una vez inicializado el programa, se sigue una lógica de comandos a ingresar acorde a la tarea:
         a. Primero ingresar la dificultad.
 
-        b. Jugar acorde a las reglas pedidas en  Tarea.
+        b. Jugar acorde a las reglas pedidas en Tarea.
 
         c. Pregunta el juego si desea jugar denuevo o si desea cerrar.
 
@@ -49,5 +53,42 @@
 
         >> cd vg_results
         >> ls 
-        >> vim vg_num
-        >> nano vg_num 
+        >> vim vg_num 
+        o puede usar el ide/ editor de texto que le sea conveniente. 
+
+    5. Adicionalmente, se dispone del archivo EM.c que se puede compilar con el comando
+        >> make EM
+        y se puede iniciar usando el comando:
+        >> ./bin/EM
+        Este archivo contiene EXCLUSIVAMENTE los requerimientos de la entrega minima, por lo que se agrego a fin
+        de facilitar la tarea del ayudante revisor, pero no es necesario usar este archivo.
+
+-> SUPUESTOS 
+
+I. Con respecto al requerimiento del enunciado de la tarea:
+
+    "...Son libres de crear otros Structs y funciones adicionales a las mencionadas
+    en el pdf, pero no pueden eliminar ni editar los existentes a menos que se encuentre
+    algun error que impida su uso correcto..."
+
+    Se decidio editar la estructura Ingrediente, donde se le cambio su variable "int turnos_elaboracion" por las variables
+    "int turnos_corte" e "int turnos_cocina_o_freir" ya que se considero que la logica de la estructura del enunciado
+    es erronea y no no permite cumplir con el requerimiento especifico de contar el numero de turnos cortando y 
+    cocinando/friendo. 
+
+II. Con respecto al comentario de Aula de la "Tarea 2 C" 16/03 en la página de Tareas.
+    "...Las funciones de inventario aceptarán parámetros a conveniencia de ustedes..."
+    Se agrego el parametro a "void agregarIngrediente()" para que quede de la forma:
+    "void agregarIngrediente(int cod_item)" a fin de poder ingresar por un código cada item.
+    De igual forma se agrego in identificador de item en "void eliminarIngrediente(int cod_item")"
+
+III. Con respocto a la discucion de aula "acciones.h" por la duda planteada por NAISA LARA y la respuesta del ayudante
+Bastian Rios:
+    "...void* contexto es solo un puntero genérico al estado que la acción necesita para trabajar.
+    ‑ Si solo requiere el tablero, pásale Tablero *.
+    ‑ Si además quieres acceder a inventario, turnos, etc., pásale Juego *.
+    int x e int y son las coordenadas de la casilla donde se ejecuta la acción (normalmente la posición de la estación y del chef en ese momento). Así la función sabe qué celda tocar.
+    Esta es la implementación pensada durante el desarrollo de la tarea, si encuentras x e y redundante y deseas utilizarlo de otra forma, no hay problema..."
+    
+    Se decidio retirar los parametros "x" e "y" de las funciones de acciones.h puesto que no se consideraron
+    necesarias. 

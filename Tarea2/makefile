@@ -1,26 +1,25 @@
-# Compiler settings
+
 CC = gcc
 CFLAGS = -Wall -Wextra -Wpedantic -g
-# Directories
+
 AUTHOR = "Katherine Huidobro Castillo"
 MAIL = "khuidobro@usm.cl"
 GITHUB = "non-linear-lilith"
-ROL = "202304656-6"
-# Variables
+ROL = "202306456-6"
+
 SRC_DIR = src
 BUILD_DIR = build
 BIN_DIR = bin
 INCLUDE_DIR = include
 FILENAME = Tarea2_LP
-# Files
+
 SRCS = $(wildcard $(SRC_DIR)/*.c)
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRCS))
 EXEC = $(BIN_DIR)/$(FILENAME)
 
-# Timing variables
+
 TIME1_as_number = $(shell date +%s%N | cut -b1-13)
 
-# Targets
 .PHONY: all clean run dirs
 
 all: dirs $(EXEC)
@@ -57,10 +56,9 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 clean:
 	rm -rf $(BUILD_DIR) $(BIN_DIR)
 	rm -rf .vscode
+	rm -rf vg_results
 run: all
 	./$(EXEC)
 
 
-
-Time2_as_number = "$(shell date +%s)"
 
