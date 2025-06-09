@@ -1,15 +1,29 @@
-==103217== Memcheck, a memory error detector
-==103217== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==103217== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==103217== Command: ./bin/Tarea2_LP
-==103217== Parent PID: 103191
-==103217== 
-==103217== 
-==103217== HEAP SUMMARY:
-==103217==     in use at exit: 0 bytes in 0 blocks
-==103217==   total heap usage: 12 allocs, 12 frees, 2,384 bytes allocated
-==103217== 
-==103217== All heap blocks were freed -- no leaks are possible
-==103217== 
-==103217== For lists of detected and suppressed errors, rerun with: -s
-==103217== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==833659== Memcheck, a memory error detector
+==833659== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==833659== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==833659== Command: ./bin/Tarea2_LP
+==833659== Parent PID: 833617
+==833659== 
+==833659== Conditional jump or move depends on uninitialised value(s)
+==833659==    at 0x10A63A: moverJugador (main.c:13)
+==833659==    by 0x10AAFE: iniciarJuego (main.c:147)
+==833659==    by 0x10AF1C: main (main.c:213)
+==833659==  Uninitialised value was created by a stack allocation
+==833659==    at 0x10A5B4: moverJugador (main.c:5)
+==833659== 
+==833659== Conditional jump or move depends on uninitialised value(s)
+==833659==    at 0x10A642: moverJugador (main.c:13)
+==833659==    by 0x10AAFE: iniciarJuego (main.c:147)
+==833659==    by 0x10AF1C: main (main.c:213)
+==833659==  Uninitialised value was created by a stack allocation
+==833659==    at 0x10A5B4: moverJugador (main.c:5)
+==833659== 
+==833659== 
+==833659== HEAP SUMMARY:
+==833659==     in use at exit: 0 bytes in 0 blocks
+==833659==   total heap usage: 17 allocs, 17 frees, 2,632 bytes allocated
+==833659== 
+==833659== All heap blocks were freed -- no leaks are possible
+==833659== 
+==833659== For lists of detected and suppressed errors, rerun with: -s
+==833659== ERROR SUMMARY: 4 errors from 2 contexts (suppressed: 0 from 0)

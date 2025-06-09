@@ -19,8 +19,8 @@ char* obtenerNombreIngrediente(int cod_item) {
 char* obtenerestadoIngrediente(int cod_estado) {
     switch (cod_estado) {
         case 0: return "Crudo";
-        case 1: return "Cocido o Frito";
-        case 2: return "Cortado";
+        case 1: return "Cortado";
+        case 2: return "Cocido o Frito";
         case 3: return "Cocido y Cortado";
         default: return NULL;
     }

@@ -1,0 +1,58 @@
+✓ Regla de tamaño minimo actualizada exitosamente a 3.
+✗ ERROR: Contraseña 12 no valida para el usuario Usuariox debido a que no cumple con las reglas ['MINIMUM_SIZE']
+✓ Contraseña 123 registrada exitosamente para el usuario Usuario1 
+✓ Contraseña 1234 registrada exitosamente para el usuario Usuario2 
+✗ ERROR: Argumeto invalido como tamaño para regla en comando: SIZE RULE 3,4
+. Se esperaba un número entero positivo, y se entrego "3,4"
+✗ ERROR: Argumeto invalido como tamaño para regla en comando: SIZE RULE -34
+. Se esperaba un número entero positivo, y se entrego ""
+✓ Regla de tamaño minimo actualizada exitosamente a 0.
+✓ Contraseña A registrada exitosamente para el usuario Usuario3 
+✓ Contraseña ASDASDSADSADSADADSADSADSADSADADSAADDSDSADA registrada exitosamente para el usuario Usuario4 
+Comando igresado "
+" no reconocido.
+✓ Regla acomaespacio creada exitosamente con restricciones A,
+✗ ERROR: Contraseña sipAsA no valida para el usuario UsuarioA debido a que no cumple con las reglas ['acomaespacio']
+✓ Regla dobleEspacio creada exitosamente con restricciones B,C,D
+✗ ERROR: argumento "('', 'punto')" invalido, usuario no registrado por comando NEW PASSWORD
+✗ ERROR: Contraseña AaBbCcDd no valida para el usuario UsuarioLegit debido a que no cumple con las reglas ['acomaespacio', 'dobleEspacio']
+✓ Regla secuencias creada exitosamente con restricciones HolaMundo,cocodrilo
+✗ ERROR: Contraseña 123HolaMundo321 no valida para el usuario Developer debido a que no cumple con las reglas ['secuencias']
+Comando igresado "
+" no reconocido.
+✗ ERROR: Usuario Usuariox no registrado.
+✓ Regla dobleEspacio eliminada
+✓ Regla vocales creada exitosamente con restricciones a,e,i,o,u
+✓ Regla numeros creada exitosamente con restricciones 1,2,3,4,5
+✗ ERROR: Contraseña murcielago no valida para el usuario Batman debido a que no cumple con las reglas ['secuencias', 'vocales']
+✗ ERROR:  Regla vocales,numeros no existe
+✓ Regla vocales eliminada
+✗ ERROR: Contraseña Murcielago no valida para el usuario Batman debido a que no cumple con las reglas ['secuencias']
+✗ ERROR: Usuario Batman no registrado.
+✗ ERROR: Usuario Batman no registrado.
+Comando igresado "
+" no reconocido.
+✓ Regla NUMEROS creada exitosamente con restricciones 0,1,2,3,4,5,6,7,8,9
+✓ Regla numeros eliminada
+✓ Restricciones ['1', '2', '3', '4', '5', 'x', 'y', 'z'] eliminadas de la regla NUMEROS
+✗ ERROR: Contraseña 0987 no valida para el usuario Usuario5 debido a que no cumple con las reglas ['NUMEROS']
+✗ ERROR: Contraseña xy1234ola no valida para el usuario Usuario5 debido a que no cumple con las reglas ['secuencias']
+✓ Restricciones ['1', '2', '3'] añadidas a la regla NUMEROS
+✗ ERROR: Contraseña probando054probando no valida para el usuario Usuario6 debido a que no cumple con las reglas ['secuencias', 'NUMEROS']
+✗ ERROR: Contraseña probandoprobando12345 no valida para el usuario Usuario7 debido a que no cumple con las reglas ['secuencias', 'NUMEROS']
+✓ Regla NUMEROS eliminada
+Comando igresado "
+" no reconocido.
+✗ ERROR: Usuario Usuario5 no registrado.
+✓ Regla vocales creada exitosamente con restricciones a,e,i,o,u
+✓ Regla vocales eliminada
+✗ ERROR: Usuario Usuario7 no registrado.
+Comando igresado "
+" no reconocido.
+✗ ERROR: Contraseña Hola no valida para el usuario Fusion1 debido a que no cumple con las reglas ['secuencias']
+✗ ERROR: Contraseña Mundo no valida para el usuario Fusion2 debido a que no cumple con las reglas ['secuencias']
+✗ ERROR: Usuario Fusion1 o Fusion2 no registrado.
+✗ ERROR: Usuario Fusion1 o Fusion2 no registrado.
+✗ ERROR: Usuario Fusion1 no registrado.
+✗ ERROR: Usuario Fusion1 o Fusion2 no registrado.
+✗ ERROR: Usuario ResultadoFinal no registrado.

@@ -1,25 +1,15 @@
-==499658== Memcheck, a memory error detector
-==499658== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==499658== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==499658== Command: ./bin/Tarea2_LP
-==499658== Parent PID: 499632
-==499658== 
-==499658== 
-==499658== HEAP SUMMARY:
-==499658==     in use at exit: 40 bytes in 1 blocks
-==499658==   total heap usage: 18 allocs, 17 frees, 3,064 bytes allocated
-==499658== 
-==499658== 40 bytes in 1 blocks are still reachable in loss record 1 of 1
-==499658==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==499658==    by 0x1092D7: crearInventario (inventario.c:17)
-==499658==    by 0x1097DA: main (main.c:106)
-==499658== 
-==499658== LEAK SUMMARY:
-==499658==    definitely lost: 0 bytes in 0 blocks
-==499658==    indirectly lost: 0 bytes in 0 blocks
-==499658==      possibly lost: 0 bytes in 0 blocks
-==499658==    still reachable: 40 bytes in 1 blocks
-==499658==         suppressed: 0 bytes in 0 blocks
-==499658== 
-==499658== For lists of detected and suppressed errors, rerun with: -s
-==499658== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==24524== Memcheck, a memory error detector
+==24524== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24524== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==24524== Command: ./bin/Tarea2_LP
+==24524== Parent PID: 24498
+==24524== 
+==24524== 
+==24524== HEAP SUMMARY:
+==24524==     in use at exit: 0 bytes in 0 blocks
+==24524==   total heap usage: 15 allocs, 15 frees, 2,528 bytes allocated
+==24524== 
+==24524== All heap blocks were freed -- no leaks are possible
+==24524== 
+==24524== For lists of detected and suppressed errors, rerun with: -s
+==24524== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

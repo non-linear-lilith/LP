@@ -1,0 +1,26 @@
+✓ Regla NONUMBERS creada exitosamente con restricciones 1,2,3,4,5
+✓ Contraseña SnsaN0 registrada exitosamente para el usuario Usuario1 
+✗ ERROR: Contraseña 123abc no valida para el usuario Usuario2 debido a que no cumple con las reglas ['NONUMBERS']
+Comando igresado "
+" no reconocido.
+✓ Regla de tamaño minimo actualizada exitosamente a 9.
+✗ ERROR: Contraseña holAa123 no valida para el usuario User1 debido a que no cumple con las reglas ['MINIMUM_SIZE', 'NONUMBERS']
+✓ Regla Impares creada exitosamente con restricciones 1,3,5,7,9
+✗ ERROR: Contraseña HolaMundo42 no valida para el usuario usuario2 debido a que no cumple con las reglas ['NONUMBERS']
+✗ ERROR: Usuario usuario2 no registrado.
+✗ ERROR: Regla Ipares no registrada.
+✓ Regla Pares creada exitosamente con restricciones 0,2,4,6,8
+✓ Contraseña contraSinNumeros registrada exitosamente para el usuario Usuario105 
+✗ ERROR: Contraseña LlegueTarde123 no valida para el usuario EmpleadoAtrasado debido a que no cumple con las reglas ['NONUMBERS', 'Impares', 'Pares']
+✓ Regla Impares eliminada
+✓ Regla Pares eliminada
+✓ Contraseña del usuario Usuario105 es: contraSinNumeros
+✗ ERROR: Usuario usuario2 o Usuario105 no registrado.
+✗ ERROR: Usuario usuario2 no registrado.
+✗ ERROR: Usuario usuario2 no registrado.
+✗ ERROR:  Regla Pares no existe
+✓ Contraseña del usuario Usuario105 es: contraSinNumeros
+✗ ERROR: Usuario usuario2 o Usuario105 no registrado.
+✗ ERROR: Usuario usuario2 no registrado.
+✗ ERROR: Usuario usuario2 no registrado.
+✗ ERROR: Contraseña Contr4sinRestr1cci0n3s no valida para el usuario UsuarioRandom debido a que no cumple con las reglas ['NONUMBERS']

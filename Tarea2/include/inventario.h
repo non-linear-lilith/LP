@@ -48,5 +48,7 @@ Ingrediente** obtenerInventario(); // Devuelve el puntero al inventario global
  * @return Nada (Tipo void)
  */
 void liberarInventario(); // Libera la memoria del inventario
+
+char* obtenerNombreIngrediente(int cod_item); // Devuelve el nombre del ingrediente según su código
 //-----------------EXTRA -------------------------
 #endif // INVENTARIO_H

@@ -1,15 +1,21 @@
-==102257== Memcheck, a memory error detector
-==102257== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==102257== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==102257== Command: ./bin/Tarea2_LP
-==102257== Parent PID: 102213
-==102257== 
-==102257== 
-==102257== HEAP SUMMARY:
-==102257==     in use at exit: 0 bytes in 0 blocks
-==102257==   total heap usage: 2 allocs, 2 frees, 2,048 bytes allocated
-==102257== 
-==102257== All heap blocks were freed -- no leaks are possible
-==102257== 
-==102257== For lists of detected and suppressed errors, rerun with: -s
-==102257== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==829958== Memcheck, a memory error detector
+==829958== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==829958== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==829958== Command: ./bin/Tarea2_LP
+==829958== Parent PID: 829914
+==829958== 
+==829958== Conditional jump or move depends on uninitialised value(s)
+==829958==    at 0x10B7C5: liberarTablero (tablero.c:112)
+==829958==    by 0x10AF6E: main (main.c:219)
+==829958==  Uninitialised value was created by a stack allocation
+==829958==    at 0x10AF09: main (main.c:202)
+==829958== 
+==829958== 
+==829958== HEAP SUMMARY:
+==829958==     in use at exit: 0 bytes in 0 blocks
+==829958==   total heap usage: 2 allocs, 2 frees, 2,048 bytes allocated
+==829958== 
+==829958== All heap blocks were freed -- no leaks are possible
+==829958== 
+==829958== For lists of detected and suppressed errors, rerun with: -s
+==829958== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

@@ -11,7 +11,7 @@
  */
 typedef struct {
     char simbolo; //’T’ (Tabla), ’C’ (Cocina), ’A’ (Almacen), ’E’ (Extintor)
-    void (* accion)(void*, int , int); // Puntero a funcion (ej:cocinar , cortar)
+    void (* accion)(void*, void*); // Puntero a funcion (ej:cocinar , cortar)
     int en_llamas; // 1 si hay incendio , 0 si no
     int turnos_inhabilitada; // Para estaciones apagadas con extintor
 } Estacion;
@@ -29,11 +29,11 @@ typedef struct {
 } Pedido;
 
 
-void cortar(void* contexto); // Tabla de cortar         (SUPUESTO III)
-void cocinar(void* contexto); // Cocina                 (SUPUESTO III)
-void buscar_ingrediente(void* contexto); // Almacen     (SUPUESTO III)
-void apagar_incendio(void* contexto); // Extintor       (SUPUESTO III)
-void entregar_pedido(void* contexto);
+void cortar(void* contexto_juego,void* contexto_jugador); // Tabla de cortar         (SUPUESTO III)
+void cocinar(void* contexto_juego,void* contexto_jugador); // Cocina                 (SUPUESTO III)
+void buscar_ingrediente(void* contexto_juego,void* contexto_jugador); // Almacen     (SUPUESTO III)
+void apagar_incendio(void* contexto_juego,void* contexto_jugador); // Extintor       (SUPUESTO III)
+void entregar_pedido(void* contexto_juego,void* contexto_jugador);
 //-----------------OBLIGATORIO -------------------------
 
 #endif // ACCIONES_H

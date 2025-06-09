@@ -43,7 +43,7 @@ void inicializarTablero(Tablero* tablero , int filas , int columnas){
     int posy= generate_random_between(0, columnas-1);
     tablero->celdas[posx][posy] = malloc(sizeof(Estacion));
     ((Estacion*)tablero->celdas[posx][posy])->simbolo = 'T';
-    //((Estacion*)tablero->celdas[posx][posy])->accion = cortar;
+    ((Estacion*)tablero->celdas[posx][posy])->accion = cortar;
     ((Estacion*)tablero->celdas[posx][posy])->en_llamas = 0;
     ((Estacion*)tablero->celdas[posx][posy])->turnos_inhabilitada = 0;
 
@@ -55,7 +55,7 @@ void inicializarTablero(Tablero* tablero , int filas , int columnas){
         if (tablero->celdas[posx][posy] == NULL) {
             tablero->celdas[posx][posy] = malloc(sizeof(Estacion));
             ((Estacion*)tablero->celdas[posx][posy])->simbolo = 'A';
-            //((Estacion*)tablero->celdas[posx][posy])->accion = buscar_ingrediente;
+            ((Estacion*)tablero->celdas[posx][posy])->accion = buscar_ingrediente;
             ((Estacion*)tablero->celdas[posx][posy])->en_llamas = 0;
             ((Estacion*)tablero->celdas[posx][posy])->turnos_inhabilitada = 0;
             flag='1';
@@ -70,7 +70,7 @@ void inicializarTablero(Tablero* tablero , int filas , int columnas){
         if (tablero->celdas[posx][posy] == NULL) {
             tablero->celdas[posx][posy] = malloc(sizeof(Estacion));
             ((Estacion*)tablero->celdas[posx][posy])->simbolo = 'C';
-            //((Estacion*)tablero->celdas[posx][posy])->accion = cocinar;
+            ((Estacion*)tablero->celdas[posx][posy])->accion = cocinar;
             ((Estacion*)tablero->celdas[posx][posy])->en_llamas = 0;
             ((Estacion*)tablero->celdas[posx][posy])->turnos_inhabilitada = 0;
             flag='1';

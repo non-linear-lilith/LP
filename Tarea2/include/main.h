@@ -47,7 +47,7 @@ typedef struct {
  * @return Nada (tipo void).
  * */
 void inicializarJugador(Jugador* jugador, Juego* juego);
-void moverJugador(Jugador* jugador, int nueva_x, int nueva_y);
+void moverJugador(Juego* juego, Jugador* jugador); //distancia es el total la que se mueve y direccion es la direccion a la que se mueve (0,1,2,3) (N^,E<,Sv,O>)
 void liberarJugador(Jugador* jugador);
 void mostrarJuego(Juego* juego,Jugador* jugador);
 void inicializarJuego(Juego* juego, int dificultad, int turnos_max);
